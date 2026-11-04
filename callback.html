@@ -22,7 +22,7 @@
 <body>
   <div>
     <h1>Miruro RPC</h1>
-    <p id="msg">Finishing Discord login… you can return to the extension.</p>
+    <p id="msg">Finishing Discord login… stay on this page a moment, then open Miruro RPC again.</p>
   </div>
   <script>
     (function () {
@@ -33,7 +33,8 @@
         return;
       }
       if (params.get("code")) {
-        msg.textContent = "Logged in. Return to Miruro RPC and wait a moment — you can close this tab.";
+        msg.textContent =
+          "Authorized. Open Miruro RPC from the Firefox menu — you should be signed in. You can close this tab.";
         return;
       }
       msg.textContent = "Missing login code. Close this tab and try Connect Discord again.";
